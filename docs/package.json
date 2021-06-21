@@ -1,0 +1,16 @@
+{
+  "name": "custom-motorcycles",
+  "version": "0.1.0",
+  "description": "Custom motorcycles is a website for a shop that customizes motorcycles.",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "keywords": [],
+  "author": "Jeferson Lucas",
+  "license": "MIT"
+}
