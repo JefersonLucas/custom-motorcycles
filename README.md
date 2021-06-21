@@ -1,5 +1,5 @@
 <p align="center" >
-  <img src="./public/src/img/svg/icons/favicon.svg" />
+  <img src="./docs/src/img/svg/icons/favicon.svg" />
 </p>
 <h1 align="center">Custom Motorcycles</h1>
 
