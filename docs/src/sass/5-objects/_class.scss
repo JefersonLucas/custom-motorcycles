@@ -1,0 +1,94 @@
+/* General */
+
+.btn {
+  border-radius: 25px;
+  background: $secondary-color;
+  padding: 12px 68px;
+  border: 3px solid $primary-color;
+  color: $primary-color;
+  @include font-size("lg");
+  &:hover {
+    color: $tertiary-color;
+    border-color: $tertiary-color;
+  }
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  background: $secondary-color;
+}
+
+.header-menu {
+  text-align: right;
+  ul li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  ul li a {
+    @include font-size("sm");
+    color: $primary-color;
+    padding: 10px 0;
+  }
+  ul li a:hover {
+    color: $tertiary-color;
+  }
+}
+
+.item-menu {
+  width: 60px;
+  height: 20px;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  &:hover {
+    color: $tertiary-color;
+  }
+}
+
+/* Introduction */
+
+.introduction {
+  width: 100%;
+  height: 585px;
+  background: url("../img/bg-intro.jpg") no-repeat center;
+  background-size: cover;
+  margin-top: 80px;
+  text-align: center;
+  padding-top: 92px;
+  h1 {
+    font-family: Docktrin;
+    @include font-size("xxxl");
+    color: $primary-color;
+  }
+}
+
+.quote-intro {
+  max-width: 380px;
+  margin: 0 auto 30px;
+  color: $tertiary-color;
+  p {
+    @include font-serify;
+    @include font-size("md");
+    font-style: italic;
+  }
+  p::before,
+  p::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: $primary-color;
+    margin: 15px auto;
+  }
+  cite {
+    font-style: normal;
+    @include font-size("lg");
+  }
+}

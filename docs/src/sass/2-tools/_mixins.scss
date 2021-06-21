@@ -1,0 +1,33 @@
+// Typography
+
+// Font family
+@mixin font-sans-serify {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin font-serify {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+// Font size
+@mixin font-size($size) {
+  @if $size == "sm" {
+    font-size: 14px;
+    line-height: 20px;
+  } @else if $size == "md" {
+    font-size: 18px;
+    line-height: 25px;
+  } @else if $size == "lg" {
+    font-size: 18px;
+    line-height: 25px;
+  } @else if $size == "xl" {
+    font-size: 36px;
+    line-height: 40px;
+  } @else if $size == "xxl" {
+    font-size: 48px;
+    line-height: 60px;
+  } @else if $size == "xxxl" {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
