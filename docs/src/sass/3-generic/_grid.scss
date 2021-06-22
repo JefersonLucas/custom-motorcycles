@@ -19,7 +19,7 @@
   }
 }
 
-%grid {
+%grid-descktop {
   float: left;
   margin-left: #{$gutter / 2}px;
   margin-right: #{$gutter / 2}px;
@@ -27,12 +27,55 @@
 
 @for $i from 1 through $columns {
   .grid-#{$i} {
-    @extend %grid;
+    @extend %grid-descktop;
     width: #{$container-desktop / $columns * $i - $gutter}px;
   }
 }
 
 .grid-1-3 {
-  @extend %grid;
+  @extend %grid-descktop;
   width: #{($container-desktop / 3)- $gutter}px;
 }
+
+// Container for tablets
+
+@media only screen and (min-width: #{sub($container-tablet)}px) and (max-width: #{sub($container-desktop)}px) {
+  .container {
+    width: #{$container-tablet}px;
+  }
+
+  %grid-tablet {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  }
+
+  @for $i from 1 through $columns {
+    .grid-#{$i} {
+      @extend %grid-tablet;
+      width: #{$container-tablet / $columns * $i - $gutter}px;
+    }
+  }
+  .grid-1-3 {
+    @extend %grid-tablet;
+    width: #{($container-tablet / 3)- $gutter}px;
+  }
+}
+
+// Container for mobile
+
+@media only screen and (max-width: #{sub($container-tablet)}px) {
+  .container {
+    width: #{$container-mobile}px;
+  }
+  %grid-mobile {
+    width: #{$container-mobile}px;
+    margin: 0;
+    float: none;
+  }
+  @for $i from 1 through $columns {
+    .grid-#{$i} {
+      @extend %grid-mobile;
+    }
+  }
+} ;

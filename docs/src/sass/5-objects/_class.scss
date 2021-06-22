@@ -52,6 +52,31 @@
   }
 }
 
+// Container for tablets
+
+@media only screen and (min-width: #{sub($container-tablet)}px) and (max-width: #{sub($container-desktop)}px) {
+  .header {
+    position: relative;
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+// Container for mobile
+
+@media only screen and  (max-width: #{sub($container-tablet)}px) {
+  .header {
+    position: relative;
+    a img {
+      margin: 0 auto;
+    }
+  }
+  .header-menu {
+    text-align: center;
+  }
+}
+
 /* Introduction */
 
 .introduction {
@@ -90,5 +115,32 @@
   cite {
     font-style: normal;
     @include font-size("lg");
+  }
+}
+
+// Container for tablets
+
+@media only screen and (min-width: #{$container-tablet}px) and (max-width: #{$container-desktop}px) {
+  .introduction {
+    margin-top: 0;
+  }
+}
+
+// Container for mobile
+
+@media only screen and (max-width: #{$container-tablet}px) {
+  .introduction {
+    margin-top: 0;
+    h1 {
+      @include font-size("xxl");
+    }
+  }
+  .quote-intro {
+    p {
+      @include font-size("sm");
+    }
+    cite {
+      @include font-size("md");
+    }
   }
 }

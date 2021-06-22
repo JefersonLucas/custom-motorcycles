@@ -22,4 +22,4 @@ For the development of this project, I used the following technologies:
 
 ## License
 
-This project is licensed under the MIT license, see the [LICENSE.md](https://github.com/JefersonLucas/portfolio/blob/master/LICENSE.md) file for details.
+This project is licensed under the MIT license, see the [LICENSE.md](https://github.com/JefersonLucas/custom-motorcycles/blob/main/LICENSE.md) file for details.

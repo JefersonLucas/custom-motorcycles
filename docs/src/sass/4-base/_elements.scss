@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: Docktrin;
-  src: local(Docktrin), url("../../font/docktrin.ttf");
+  src: local(Docktrin), url("../font/docktrin.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -21,4 +21,9 @@ body {
 
 p {
   @include font-size("sm");
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
