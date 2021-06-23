@@ -1,4 +1,4 @@
-/* General */
+/* Components */
 
 .btn {
   border-radius: 25px;
@@ -13,6 +13,21 @@
   }
 }
 
+.subtitle {
+  font-weight: bold;
+  @include font-size("xl");
+  color: $secondary-color;
+  text-align: center;
+  &::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: $primary-color;
+    margin: 0 auto;
+  }
+}
+
 /* Header */
 
 .header {
@@ -21,6 +36,7 @@
   position: fixed;
   top: 0;
   background: $secondary-color;
+  z-index: 100;
 }
 
 .header-menu {
@@ -54,7 +70,7 @@
 
 // Container for tablets
 
-@media only screen and (min-width: #{sub($container-tablet)}px) and (max-width: #{sub($container-desktop)}px) {
+@media only screen and (min-width: 788px) and (max-width: 979px) {
   .header {
     position: relative;
     img {
@@ -65,7 +81,7 @@
 
 // Container for mobile
 
-@media only screen and  (max-width: #{sub($container-tablet)}px) {
+@media only screen and (max-width: 787px) {
   .header {
     position: relative;
     a img {
@@ -120,7 +136,7 @@
 
 // Container for tablets
 
-@media only screen and (min-width: #{$container-tablet}px) and (max-width: #{$container-desktop}px) {
+@media only screen and (min-width: 788px) and (max-width: 979px) {
   .introduction {
     margin-top: 0;
   }
@@ -128,7 +144,7 @@
 
 // Container for mobile
 
-@media only screen and (max-width: #{$container-tablet}px) {
+@media only screen and (max-width: 787px) {
   .introduction {
     margin-top: 0;
     h1 {
@@ -142,5 +158,51 @@
     cite {
       @include font-size("md");
     }
+  }
+}
+
+/* About */
+
+.about {
+  padding: 60px 0;
+  p {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+.about-itens {
+  margin-top: 60px;
+  li {
+    min-height: 300px;
+    background: $primary-color;
+  }
+  li h3 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    @include font-size("lg");
+  }
+  li h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: $secondary-color;
+    margin: 5px auto;
+  }
+  p {
+    padding: 0 20px 35px;
+  }
+}
+.about-icons {
+  background: $secondary-color;
+  padding: 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 787px) {
+  .about-itens li {
+    margin-bottom: 20px;
   }
 }
